@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FEFEFE"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/pokemonNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="#4078c0"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/pokemonImageView"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageView" />
+
+    <TextView
+        android:id="@+id/pokemonTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#c0e167"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageView"
+        app:layout_constraintStart_toStartOf="@+id/pokemonNameTextView" />
+
+    <ImageView
+        android:id="@+id/pokemonImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pokemon_placeholder" />
+</androidx.constraintlayout.widget.ConstraintLayout>
