@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pokemonLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -18,18 +18,18 @@
         app:srcCompat="@drawable/pokemon_logo" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/pokeball"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonLogo"
         app:srcCompat="@drawable/pokeball" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/backpack"
         android:layout_width="70dp"
         android:layout_height="90dp"
         android:scaleType="centerCrop"
