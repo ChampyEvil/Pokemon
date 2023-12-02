@@ -1,5 +1,6 @@
 package com.champyevil.pokemon
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,9 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.pokeball.setOnClickListener {
-            Log.d(
-                MainActivity::class.java.simpleName, "on click"
-            )
+//            Example for on click
+//            Log.d(
+//                MainActivity::class.java.simpleName, "on click"
+//            )
+            val intent = Intent(this, PokemonDetailActivity::class.java)
+            startActivity(intent)
         }
     }
 }
