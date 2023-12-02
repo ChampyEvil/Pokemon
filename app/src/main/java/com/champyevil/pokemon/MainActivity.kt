@@ -22,5 +22,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PokemonDetailActivity::class.java)
             startActivity(intent)
         }
+
+        binding.backpack.setOnClickListener {
+            val pokemonCollectionIntent = Intent(this, PokemonCollectionActivity::class.java)
+            startActivity(pokemonCollectionIntent)
+        }
     }
 }
