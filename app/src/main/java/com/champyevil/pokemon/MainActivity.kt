@@ -3,7 +3,6 @@ package com.champyevil.pokemon
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.champyevil.pokemon.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,8 +18,9 @@ class MainActivity : AppCompatActivity() {
 //            Log.d(
 //                MainActivity::class.java.simpleName, "on click"
 //            )
-            val intent = Intent(this, PokemonDetailActivity::class.java)
-            startActivity(intent)
+            val pokemonDetailIntent = Intent(this, PokemonDetailActivity::class.java)
+            pokemonDetailIntent.putExtra("Name", "ChampyEvil")
+            startActivity(pokemonDetailIntent)
         }
 
         binding.backpack.setOnClickListener {
