@@ -17,16 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     @Inject lateinit var commonLog: CommonLog
 
-    @Inject lateinit var pokemonApi: PokemonApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         commonLog.logCommon()
-        lifecycleScope.launch {
-            val list = pokemonApi.getPokemonList()
-            list
-        }
+
     }
 }

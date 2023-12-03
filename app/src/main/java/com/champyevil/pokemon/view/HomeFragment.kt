@@ -14,7 +14,9 @@ import com.champyevil.pokemon.PokemonDetailActivity
 import com.champyevil.pokemon.R
 import com.champyevil.pokemon.databinding.FragmentHomeBinding
 import com.champyevil.pokemon.viewModel.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
@@ -38,9 +40,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.pokeball.setOnClickListener {
-            val actionHomeToDetail =
-                R.id.action_homeFragment_to_pokemonDetailFragment
-            findNavController().navigate(actionHomeToDetail)
+            viewModel.getPokemonList()
+//            val actionHomeToDetail =
+//                R.id.action_homeFragment_to_pokemonDetailFragment
+//            findNavController().navigate(actionHomeToDetail)
         }
 
         binding.backpack.setOnClickListener {
@@ -48,7 +51,5 @@ class HomeFragment : Fragment() {
                 R.id.action_homeFragment_to_pokemonCollectionFragment
             findNavController().navigate(actionHomeToCollection)
         }
-
-        viewModel.getPokemonList()
     }
 }
