@@ -6,15 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.champyevil.pokemon.PokemonCollectionActivity
 import com.champyevil.pokemon.PokemonDetailActivity
 import com.champyevil.pokemon.R
 import com.champyevil.pokemon.databinding.FragmentHomeBinding
+import com.champyevil.pokemon.viewModel.HomeViewModel
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+
+    val viewModel: HomeViewModel by viewModels()
+//    val viewModel: HomeViewModel by activityViewModels() // ผูกกับ activity, fragment ตาย ตัวนี้ไม่ตาย
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,5 +48,7 @@ class HomeFragment : Fragment() {
                 R.id.action_homeFragment_to_pokemonCollectionFragment
             findNavController().navigate(actionHomeToCollection)
         }
+
+        viewModel.getPokemonList()
     }
 }
